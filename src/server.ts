@@ -196,7 +196,6 @@ app.delete("/api/clear", async (req: Request, res: Response) => {
       res.status(404).json({ message: "Arquivo de usuários não encontrado!" });
     }
   } catch (error) {
-    console.error("Erro ao deletar todos os usuários:", error);
     sendErrorResponse(res, "Erro ao deletar todos os usuários", 500);
   }
 });
