@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="logo.png" sizes="48x48" />
+    <title>Usuários</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Teste - Lógica Soluções</h1>
+      <img src="logo.png" alt="Logo da Lógica Soluções" />
+    </header>
+    <main>
+      <div class="new-users-buttons">
+        <button id="fetch-users">Obter novos usuários</button>
+        <button id="save-new-users">Salvar novos usuários</button>
+        <button id="delete-all-added-users">Limpar CSV</button>
+      </div>
+
+      <section class="accordion">
+        <span>Novos usuários</span>
+        <span class="chevron">▼</span>
+      </section>
+
+      <div class="accordion-content">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Avatar</th>
+              <th>Nome</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="new-users-list">
+            <!-- New users will be included here -->
+          </tbody>
+        </table>
+        <div id="empty-table-message-container" style="display: flex">
+          <p>Não existem novos usuários...</p>
+          <p>Clique no botão "Obter usuários" para adicionar novos usuários!</p>
+        </div>
+      </div>
+
+      <section class="accordion">
+        <span>Usuários adicionados</span>
+        <span class="chevron">▼</span>
+      </section>
+
+      <div class="accordion-content">
+        <div>
+          <input
+            type="text"
+            id="search-term"
+            placeholder="Buscar por ID, nome ou e-mail"
+          />
+          <button id="search-button">Buscar</button>
+          <button id="clear-search">Limpar Busca</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Avatar</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="user-list">
+            <!-- Added users will be included here -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>By André Fonseca</footer>
+
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
